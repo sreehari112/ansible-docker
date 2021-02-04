@@ -6,7 +6,7 @@
             docker_image: 
                 name=testt
                 tag=v1
-                path=/home/ubuntu/demo/
+                path=/home/ubuntu/ansible-docker/docker/
                 state=present
           - name: create container
             docker_container:
