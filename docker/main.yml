@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+          - name: create build
+            docker_image: 
+                name=testt
+                tag=v1
+                path=/home/ubuntu/demo/
+                state=present
+          - name: create container
+            docker_container:
+                 name: testtcon
+                 image: testt:v1
+                 command: sleep infinity
+                 state: present
